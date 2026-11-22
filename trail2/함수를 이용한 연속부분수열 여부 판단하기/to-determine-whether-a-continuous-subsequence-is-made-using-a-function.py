@@ -6,10 +6,11 @@ y = list(map(int, input().split()))
 
 def tell(a,b,k):
     while b[0] in a:
-        if a[a.index(b[0]):a.index(b[0])+k] == b:
+        t = a.index(b[0])
+        if a[t:t+k] == b:
             return ('Yes')
         else:
-            a.pop(a.index(b[0]))
+            a.pop(t)
     return('No')
 
 print(tell(x,y,n2))
